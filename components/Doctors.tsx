@@ -6,7 +6,7 @@ const doctors = [
     rating: "4.8",
     role: "Dermatologist",
     exp: "18+ Years of Experience",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=faces",
+    img: "/doc-arjun.jpg",
   },
   {
     name: "Dr. Priya Mehta",
@@ -20,14 +20,14 @@ const doctors = [
     rating: "4.9",
     role: "Dermatologic Surgeon",
     exp: "15+ Years of Experience",
-    img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=faces",
+    img: "/doc-rahul.jpg",
   },
   {
     name: "Dr. Neha Kapoor",
     rating: "4.6",
     role: "Trichologist",
     exp: "10+ Years of Experience",
-    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=faces",
+    img: "/doc-neha.jpg",
   },
 ];
 

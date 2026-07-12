@@ -5,25 +5,25 @@ const reviews = [
     text: "The team at Dermato Planet is incredible! They transformed my skin with the right treatment and care. Highly recommended!",
     name: "Priya Sharma",
     when: "2 weeks ago",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces",
+    img: "/review-priya.jpg",
   },
   {
     text: "Advanced technology and expert doctors! My acne treatment results have been amazing. Thank you, Dermato Planet!",
     name: "Rahul Verma",
     when: "3 weeks ago",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces",
+    img: "/review-rahul.jpg",
   },
   {
     text: "I had an excellent experience with laser hair reduction. Professional staff and great results!",
     name: "Neha Kapoor",
     when: "1 month ago",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=faces",
+    img: "/review-neha.jpg",
   },
   {
     text: "The best dermatology clinic I've visited. They truly care about their patients and deliver real results.",
     name: "Arjun Malhotra",
     when: "1 month ago",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces",
+    img: "/review-arjun.jpg",
   },
 ];
 

@@ -2,10 +2,10 @@ import { Star } from "lucide-react";
 import HeroSearch from "./HeroSearch";
 
 const avatars = [
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=faces",
+  "/review-priya.jpg",
+  "/review-rahul.jpg",
+  "/review-neha.jpg",
+  "/review-arjun.jpg",
 ];
 
 export default function Hero() {

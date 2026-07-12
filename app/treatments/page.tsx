@@ -233,13 +233,38 @@ export default function TreatmentsPage() {
                         ))}
                       </ul>
                     </div>
-                    <div className="relative">
+                    <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl ring-1 ring-white/15">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src="/skin-analysis.jpg"
-                        alt="AI-powered facial skin mapping"
-                        className="mx-auto max-h-80 w-full object-contain mix-blend-screen"
+                        alt="AI-powered facial skin analysis"
+                        className="h-full w-full object-cover"
                       />
+                      {/* AI scan mesh overlay */}
+                      <svg
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 h-full w-full text-teal-500 opacity-50 mix-blend-screen"
+                        viewBox="0 0 200 250"
+                        preserveAspectRatio="none"
+                      >
+                        <defs>
+                          <pattern id="mesh" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M20 0H0V20" fill="none" stroke="currentColor" strokeWidth="0.4" />
+                          </pattern>
+                        </defs>
+                        <rect width="200" height="250" fill="url(#mesh)" />
+                        {[40, 90, 150, 200].map((cy) => (
+                          <circle key={cy} cx={(cy % 100) + 60} cy={cy} r="1.6" fill="currentColor" />
+                        ))}
+                      </svg>
+                      {/* scanning line + gradient */}
+                      <div className="pointer-events-none absolute inset-x-0 top-1/2 h-16 -translate-y-1/2 bg-gradient-to-b from-transparent via-teal-500/25 to-transparent" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+                      {/* corner brackets */}
+                      <span className="pointer-events-none absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-teal-500/70" />
+                      <span className="pointer-events-none absolute right-3 top-3 h-5 w-5 border-r-2 border-t-2 border-teal-500/70" />
+                      <span className="pointer-events-none absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-teal-500/70" />
+                      <span className="pointer-events-none absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-teal-500/70" />
                     </div>
                   </div>
                 )}
