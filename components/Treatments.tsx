@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { waLink, WA_MESSAGES } from "@/lib/whatsapp";
 import {
   CalendarDays,
   Sparkles,
@@ -26,7 +27,7 @@ const treatments = [
   { icon: Zap, title: "Laser Treatments" },
   { icon: Smile, title: "Medi Facials", sub: "Carbon · Vampire Facial" },
   { icon: Syringe, title: "Skin Boosters", sub: "PDRN Therapy" },
-  { icon: HeartPulse, title: "Anti-Ageing Therapy", sub: "PRP" },
+  { icon: HeartPulse, title: "Anti-Ageing Therapy", sub: "Botox · Fillers" },
   { icon: ShieldPlus, title: "Korean Skin Treatments", sub: "Premium Machines" },
 ];
 
@@ -83,7 +84,7 @@ export default function Treatments() {
               alt="Dermato Planet doctor"
               className="h-72 w-72 rounded-full object-cover object-top shadow-card ring-8 ring-brand-50"
             />
-            <div className="absolute -right-4 top-4 max-w-[220px] rounded-2xl bg-teal-800 p-4 text-white shadow-card">
+            <div className="absolute -bottom-4 -right-6 max-w-[220px] rounded-2xl bg-teal-800 p-4 text-white shadow-card">
               <Sparkles size={18} className="mb-1 text-brand-200" />
               <p className="text-sm font-bold">Comprehensive Care, Seamless Experience</p>
               <p className="mt-1 text-xs text-white/70">
@@ -108,8 +109,11 @@ export default function Treatments() {
 
           <div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-3">
             {treatments.map(({ icon: Icon, title, sub }) => (
-              <div
+              <a
                 key={title}
+                href={waLink(WA_MESSAGES.treatment(title))}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-col items-center rounded-xl border border-brand-100 bg-white p-4 text-center transition-all hover:-translate-y-0.5 hover:border-teal-700 hover:shadow-soft"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
@@ -123,7 +127,7 @@ export default function Treatments() {
                     {sub}
                   </p>
                 )}
-              </div>
+              </a>
             ))}
           </div>
 

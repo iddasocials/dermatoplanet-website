@@ -25,6 +25,7 @@ import Footer from "@/components/Footer";
 import CtaBar from "@/components/CtaBar";
 import TreatmentsSectionNav from "@/components/TreatmentsSectionNav";
 import { treatmentCategories } from "@/content/treatments";
+import { waLink, WA_MESSAGES } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Treatments — Dermato Planet",
@@ -361,7 +362,7 @@ export default function TreatmentsPage() {
                 Meet Our Specialists <ArrowRight size={17} />
               </Link>
               <a
-                href="https://wa.me/918433551004"
+                href={waLink(WA_MESSAGES.treatmentPlan)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25a355] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1f8b48]"

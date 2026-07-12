@@ -40,7 +40,7 @@ function GoogleG({ size = 20 }: { size?: number }) {
 
 export default function Reviews() {
   return (
-    <section id="contact" className="bg-brand-50 py-16 lg:py-20">
+    <section id="reviews" className="bg-brand-50 py-16 lg:py-20">
       <div className="container-x">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">

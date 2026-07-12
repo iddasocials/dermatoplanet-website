@@ -17,13 +17,13 @@ import {
 } from "lucide-react";
 import Logo from "./Logo";
 import { treatmentCategories } from "@/content/treatments";
+import { waLink, WA_MESSAGES } from "@/lib/whatsapp";
 
 const links = [
   { label: "Home", href: "/" },
   { label: "Doctors", href: "/#doctors" },
   { label: "Treatments", href: "/treatments" },
   { label: "Contact Us", href: "/#contact" },
-  { label: "Gallery", href: "/#gallery" },
 ];
 
 const categoryIcons: Record<string, LucideIcon> = {
@@ -172,12 +172,14 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <Link
-            href="/treatments"
+          <a
+            href={waLink(WA_MESSAGES.book)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-brand-600 px-6 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-700"
           >
             Book Appointment
-          </Link>
+          </a>
         </div>
 
         <button
@@ -255,13 +257,15 @@ export default function Navbar() {
               )
             )}
             <li>
-              <Link
-                href="/treatments"
+              <a
+                href={waLink(WA_MESSAGES.book)}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-block rounded-full bg-brand-600 px-6 py-2.5 text-sm font-semibold text-white"
               >
                 Book Appointment
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

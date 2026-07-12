@@ -1,4 +1,5 @@
-import { Search, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import HeroSearch from "./HeroSearch";
 
 const avatars = [
   "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces",
@@ -70,22 +71,7 @@ export default function Hero() {
           </p>
 
           {/* search */}
-          <form className="mt-7 flex items-center gap-2 rounded-full bg-white p-2 shadow-card ring-1 ring-brand-100">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-teal-700 text-white">
-              <Search size={20} />
-            </span>
-            <input
-              type="text"
-              placeholder="What skin or hair concern are you looking for?"
-              className="w-full bg-transparent px-2 text-[15px] text-navy placeholder:text-navy/40 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="hidden shrink-0 rounded-full bg-brand-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 sm:block"
-            >
-              Search
-            </button>
-          </form>
+          <HeroSearch />
         </div>
 
         {/* right image */}

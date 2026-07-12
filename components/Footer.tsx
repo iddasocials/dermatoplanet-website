@@ -42,10 +42,15 @@ export default function Footer() {
         <div>
           <h4 className="mb-4 font-bold text-white">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            {["Home", "Doctors", "Treatments", "Gallery", "Contact Us"].map((l) => (
-              <li key={l}>
-                <a href="#" className="transition-colors hover:text-white">
-                  {l}
+            {[
+              { label: "Home", href: "/" },
+              { label: "Doctors", href: "/#doctors" },
+              { label: "Treatments", href: "/treatments" },
+              { label: "Contact Us", href: "/#contact" },
+            ].map((l) => (
+              <li key={l.label}>
+                <a href={l.href} className="transition-colors hover:text-white">
+                  {l.label}
                 </a>
               </li>
             ))}
@@ -55,10 +60,16 @@ export default function Footer() {
         <div>
           <h4 className="mb-4 font-bold text-white">Treatments</h4>
           <ul className="space-y-2 text-sm">
-            {["Hair Transplant", "Laser Treatments", "Anti-Ageing", "Chemical Peel", "Skin Boosters"].map((l) => (
-              <li key={l}>
-                <a href="#treatments" className="transition-colors hover:text-white">
-                  {l}
+            {[
+              { label: "Hair Transplant", href: "/treatments#hair" },
+              { label: "Laser Treatments", href: "/treatments#laser" },
+              { label: "Anti-Ageing", href: "/treatments#anti-ageing" },
+              { label: "Chemical Peels", href: "/treatments#skin" },
+              { label: "Facials", href: "/treatments#facials" },
+            ].map((l) => (
+              <li key={l.label}>
+                <a href={l.href} className="transition-colors hover:text-white">
+                  {l.label}
                 </a>
               </li>
             ))}
