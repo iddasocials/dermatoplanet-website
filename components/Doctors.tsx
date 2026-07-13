@@ -1,33 +1,34 @@
-import { Star, Stethoscope, Briefcase } from "lucide-react";
+import { Stethoscope, Briefcase, GraduationCap, MessageCircle } from "lucide-react";
+import { waLink } from "@/lib/whatsapp";
 
 const doctors = [
   {
-    name: "Dr. Arjun Sharma",
-    rating: "4.8",
-    role: "Dermatologist",
-    exp: "18+ Years of Experience",
-    img: "/doc-arjun.jpg",
+    name: "Dr. Rajeev Dhir",
+    qualifications: "MBBS, MD (Dermatology, Venereology & Leprosy)",
+    role: "Consultant Dermatologist — Dermocosmetology",
+    exp: "30+ Years of Experience",
+    expertise: ["Hair", "Acne", "Psoriasis", "PRP", "Anti-Ageing"],
+    img: "/dr-rajeev-dhir.jpg",
+    cutout: false,
   },
   {
-    name: "Dr. Priya Mehta",
-    rating: "4.7",
-    role: "Cosmetologist",
-    exp: "12+ Years of Experience",
-    img: "/doctor.jpg",
+    name: "Dr. Shweta Tripathi",
+    qualifications: "MBBS, DDV · CDSI Member",
+    role: "Dermatologist & Cosmetologist",
+    exp: "6+ Years of Experience",
+    expertise: ["Acne", "Pigmentation", "Melasma", "Botox", "Laser"],
+    img: "/dr-shweta-tripathi.jpg",
+    cutout: false,
   },
   {
-    name: "Dr. Rahul Verma",
-    rating: "4.9",
-    role: "Dermatologic Surgeon",
-    exp: "15+ Years of Experience",
-    img: "/doc-rahul.jpg",
-  },
-  {
-    name: "Dr. Neha Kapoor",
-    rating: "4.6",
-    role: "Trichologist",
+    name: "Dr. Lalit Rajpal",
+    qualifications: "MBBS, MS, MCh (Plastic Surgery)",
+    role: "Cosmetic & Plastic Surgeon",
     exp: "10+ Years of Experience",
-    img: "/doc-neha.jpg",
+    expertise: ["Hair Transplant", "Rhinoplasty", "Fillers", "Body Contouring"],
+    img: "/dr-lalit-rajpal.jpg",
+    // photo has a plain white studio background — tint it to match the others
+    cutout: true,
   },
 ];
 
@@ -51,40 +52,70 @@ export default function Doctors() {
           <div className="mt-5 h-1 w-16 rounded-full bg-brand-400" />
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {doctors.map((d) => (
-            <div
+            <article
               key={d.name}
-              className="rounded-3xl bg-white p-6 text-center shadow-card ring-1 ring-brand-100/70 transition-transform hover:-translate-y-1"
+              className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-brand-100/70 transition-transform hover:-translate-y-1"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={d.img}
-                alt={d.name}
-                className="mx-auto h-32 w-32 rounded-full object-cover ring-4 ring-brand-50"
-              />
-              <div className="mx-auto mt-5 h-1 w-10 rounded-full bg-brand-400" />
-              <h3 className="mt-4 text-lg font-bold text-navy">{d.name}</h3>
-              <div className="mt-2 flex items-center justify-center gap-2">
-                <div className="flex text-amber-400">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} fill="currentColor" strokeWidth={0} />
-                  ))}
-                </div>
-                <span className="text-sm font-semibold text-navy/70">{d.rating}</span>
+              {/* photo */}
+              <div
+                className={`aspect-[4/5] w-full overflow-hidden ${
+                  d.cutout
+                    ? "bg-gradient-to-b from-[#eef3f9] to-[#d9e5f1]"
+                    : "bg-brand-50"
+                }`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={d.img}
+                  alt={d.name}
+                  className={`h-full w-full object-cover object-top ${
+                    d.cutout ? "mix-blend-multiply" : ""
+                  }`}
+                />
               </div>
 
-              <div className="mt-4 space-y-2 border-t border-brand-100 pt-4 text-left">
-                <p className="flex items-center gap-2 text-sm text-navy/70">
-                  <Stethoscope size={16} className="text-brand-500" />
-                  {d.role}
+              {/* details */}
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl font-bold text-navy">{d.name}</h3>
+                <p className="mt-1 flex items-start gap-1.5 text-xs font-medium text-brand-600">
+                  <GraduationCap size={14} className="mt-0.5 shrink-0" />
+                  {d.qualifications}
                 </p>
-                <p className="flex items-center gap-2 text-sm text-navy/70">
-                  <Briefcase size={16} className="text-brand-500" />
-                  {d.exp}
-                </p>
+
+                <div className="mt-4 space-y-2 border-t border-brand-100 pt-4">
+                  <p className="flex items-center gap-2 text-sm text-navy/75">
+                    <Stethoscope size={16} className="shrink-0 text-brand-500" />
+                    {d.role}
+                  </p>
+                  <p className="flex items-center gap-2 text-sm text-navy/75">
+                    <Briefcase size={16} className="shrink-0 text-brand-500" />
+                    {d.exp}
+                  </p>
+                </div>
+
+                <div className="mb-6 mt-4 flex flex-wrap gap-1.5">
+                  {d.expertise.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-semibold text-brand-700"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={waLink(`Hi Dermato Planet 👋, I'd like to consult ${d.name}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+                >
+                  <MessageCircle size={16} /> Consult
+                </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
