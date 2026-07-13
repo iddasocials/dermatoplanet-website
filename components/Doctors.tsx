@@ -9,7 +9,6 @@ const doctors = [
     exp: "30+ Years of Experience",
     expertise: ["Hair", "Acne", "Psoriasis", "PRP", "Anti-Ageing"],
     img: "/dr-rajeev-dhir.jpg",
-    cutout: false,
   },
   {
     name: "Dr. Shweta Tripathi",
@@ -18,7 +17,6 @@ const doctors = [
     exp: "6+ Years of Experience",
     expertise: ["Acne", "Pigmentation", "Melasma", "Botox", "Laser"],
     img: "/dr-shweta-tripathi.jpg",
-    cutout: false,
   },
   {
     name: "Dr. Lalit Rajpal",
@@ -27,8 +25,14 @@ const doctors = [
     exp: "10+ Years of Experience",
     expertise: ["Hair Transplant", "Rhinoplasty", "Fillers", "Body Contouring"],
     img: "/dr-lalit-rajpal.jpg",
-    // photo has a plain white studio background — tint it to match the others
-    cutout: true,
+  },
+  {
+    name: "Dr. Rashi Lade",
+    qualifications: "MDS (Oral & Maxillofacial Surgery)",
+    role: "Oral & Maxillofacial Surgeon · Clinical Cosmetologist",
+    exp: "5+ Years of Experience",
+    expertise: ["Injectables", "PRP", "GFC", "Microneedling", "Anti-Ageing"],
+    img: "/dr-rashi-lade.jpg",
   },
 ];
 
@@ -52,27 +56,19 @@ export default function Doctors() {
           <div className="mt-5 h-1 w-16 rounded-full bg-brand-400" />
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {doctors.map((d) => (
             <article
               key={d.name}
               className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-brand-100/70 transition-transform hover:-translate-y-1"
             >
               {/* photo */}
-              <div
-                className={`aspect-[4/5] w-full overflow-hidden ${
-                  d.cutout
-                    ? "bg-gradient-to-b from-[#eef3f9] to-[#d9e5f1]"
-                    : "bg-brand-50"
-                }`}
-              >
+              <div className="aspect-[4/5] w-full overflow-hidden bg-brand-50">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={d.img}
                   alt={d.name}
-                  className={`h-full w-full object-cover object-top ${
-                    d.cutout ? "mix-blend-multiply" : ""
-                  }`}
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
 
@@ -107,7 +103,7 @@ export default function Doctors() {
                 </div>
 
                 <a
-                  href={waLink(`Hi Dermato Planet 👋, I'd like to consult ${d.name}.`)}
+                  href={waLink(`Hi Dermato Planet, I'd like to consult ${d.name}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"

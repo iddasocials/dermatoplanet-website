@@ -15,12 +15,12 @@ export function waLink(text?: string): string {
 
 // Reusable default messages
 export const WA_MESSAGES = {
-  book: "Hi Dermato Planet 👋, I'd like to book an appointment.",
+  book: "Hi Dermato Planet, I'd like to book an appointment.",
   treatmentPlan:
-    "Hi Dermato Planet 👋, I'd like to get a personalized treatment plan.",
-  general: "Hi Dermato Planet 👋, I have a question about your treatments.",
+    "Hi Dermato Planet, I'd like to get a personalized treatment plan.",
+  general: "Hi Dermato Planet, I have a question about your treatments.",
   concern: (q: string) =>
-    `Hi Dermato Planet 👋, I'm looking for help with: ${q}`,
+    `Hi Dermato Planet, I'm looking for help with: ${q}`,
   treatment: (name: string) =>
-    `Hi Dermato Planet 👋, I'd like to know more about ${name}.`,
+    `Hi Dermato Planet, I'd like to know more about ${name}.`,
 };

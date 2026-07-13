@@ -40,7 +40,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const lines = [
-      "Hi Dermato Planet 👋, I'd like to book an appointment.",
+      "Hi Dermato Planet, I'd like to book an appointment.",
       name && `Name: ${name}`,
       concern && `Concern: ${concern}`,
       message && `Message: ${message}`,
