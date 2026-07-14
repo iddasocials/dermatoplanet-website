@@ -17,14 +17,18 @@ import {
 } from "lucide-react";
 
 const treatments = [
+  // priority treatments first
+  { icon: ScanFace, title: "MNRF", sub: "Microneedling Radiofrequency" },
+  { icon: Zap, title: "LHR", sub: "Laser Hair Reduction" },
+  { icon: Sparkles, title: "Pico Laser", sub: "Pigmentation · Tattoo" },
+  { icon: Syringe, title: "PRP", sub: "Platelet-Rich Plasma" },
+  { icon: Droplets, title: "Hydrafacial", sub: "Instant Glow" },
+  // rest
   { icon: Sparkles, title: "Hair Transplant" },
   { icon: Droplet, title: "GFC", sub: "Growth Factor Concentrate" },
   { icon: Atom, title: "Exosomes Therapy" },
   { icon: Grid2x2, title: "QR678 Therapy" },
-  { icon: Syringe, title: "PRP", sub: "Platelet-Rich Plasma" },
   { icon: Droplets, title: "Mesotherapy" },
-  { icon: ScanFace, title: "Microneedling Therapy" },
-  { icon: Zap, title: "Laser Treatments" },
   { icon: Smile, title: "Medi Facials", sub: "Carbon · Vampire Facial" },
   { icon: Syringe, title: "Skin Boosters", sub: "PDRN Therapy" },
   { icon: HeartPulse, title: "Anti-Ageing Therapy", sub: "Botox · Fillers" },
