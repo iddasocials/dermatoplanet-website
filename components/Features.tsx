@@ -12,7 +12,7 @@ export default function Features() {
   return (
     <section className="bg-white pb-10">
       <div className="container-x">
-        <div className="grid grid-cols-2 gap-6 rounded-2xl border border-brand-100 bg-brand-50/40 px-6 py-7 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="reveal-group grid grid-cols-2 gap-6 rounded-2xl border border-brand-100 bg-brand-50/40 px-6 py-7 sm:grid-cols-3 lg:grid-cols-5">
           {features.map(({ icon: Icon, title, sub }) => (
             <div key={title} className="flex items-center gap-3">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-brand-600 shadow-soft">

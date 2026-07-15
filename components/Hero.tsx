@@ -15,8 +15,8 @@ export default function Hero() {
       className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-brand-100"
     >
       {/* decorative blobs */}
-      <div className="pointer-events-none absolute -right-24 top-10 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-brand-100/60 blur-3xl" />
+      <div className="animate-floaty pointer-events-none absolute -right-24 top-10 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" />
+      <div className="animate-floaty-slow pointer-events-none absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-brand-100/60 blur-3xl" />
 
       <div className="container-x relative grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
         {/* left */}
@@ -83,7 +83,7 @@ export default function Hero() {
             alt="Healthy, radiant skin — Dermato Planet"
             className="h-[420px] w-full rounded-[2rem] object-cover object-top shadow-card sm:h-[540px]"
           />
-          <div className="absolute bottom-5 left-5 rounded-2xl bg-white/90 px-5 py-3 shadow-soft backdrop-blur">
+          <div className="animate-floaty absolute bottom-5 left-5 rounded-2xl bg-white/90 px-5 py-3 shadow-soft backdrop-blur">
             <p className="text-xs font-medium text-navy/60">Trusted by</p>
             <p className="text-lg font-extrabold text-brand-600">10,000+ Patients</p>
           </div>

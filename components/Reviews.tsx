@@ -40,9 +40,9 @@ function GoogleG({ size = 20 }: { size?: number }) {
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-brand-50 py-16 lg:py-20">
+    <section id="reviews" className="scroll-mt-24 bg-brand-50 py-16 lg:py-20">
       <div className="container-x">
-        <div className="text-center">
+        <div className="reveal text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
             Our Happy Patients
           </h2>
@@ -59,7 +59,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="reveal-group mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map((r) => (
             <div
               key={r.name}

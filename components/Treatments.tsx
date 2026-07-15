@@ -111,7 +111,7 @@ export default function Treatments() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-3">
+          <div className="reveal-group grid grid-cols-2 gap-3 p-4 sm:grid-cols-3">
             {treatments.map(({ icon: Icon, title, sub }) => (
               <a
                 key={title}

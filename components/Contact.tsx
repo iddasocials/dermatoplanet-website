@@ -51,12 +51,12 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-16 lg:py-24"
+      className="relative scroll-mt-24 overflow-hidden bg-white py-16 lg:py-24"
     >
       <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-brand-100/50 blur-3xl" />
       <div className="container-x relative grid gap-10 lg:grid-cols-2 lg:gap-16">
         {/* left: intro + details */}
-        <div>
+        <div className="reveal">
           <p className="text-xs font-bold uppercase tracking-widest text-brand-500">
             Get In Touch
           </p>
@@ -102,14 +102,14 @@ export default function Contact() {
             href={waLink(WA_MESSAGES.general)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25a355] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1f8b48]"
+            className="animate-pulse-ring mt-8 inline-flex items-center gap-2 rounded-full bg-[#25a355] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1f8b48]"
           >
             <MessageCircle size={18} /> Chat on WhatsApp
           </a>
         </div>
 
         {/* right: form */}
-        <div className="rounded-3xl border border-brand-100 bg-white p-6 shadow-card sm:p-8">
+        <div className="reveal rounded-3xl border border-brand-100 bg-white p-6 shadow-card sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label

@@ -40,11 +40,11 @@ export default function Doctors() {
   return (
     <section
       id="doctors"
-      className="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white py-16 lg:py-24"
+      className="relative scroll-mt-24 overflow-hidden bg-gradient-to-b from-brand-50 to-white py-16 lg:py-24"
     >
       <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_top_right,rgba(75,155,222,0.12),transparent_60%)]" />
       <div className="container-x relative">
-        <div className="max-w-2xl">
+        <div className="reveal max-w-2xl">
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-navy sm:text-5xl">
             Connect With The Best
             <br />
@@ -56,7 +56,7 @@ export default function Doctors() {
           <div className="mt-5 h-1 w-16 rounded-full bg-brand-400" />
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="reveal-group mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {doctors.map((d) => (
             <article
               key={d.name}
