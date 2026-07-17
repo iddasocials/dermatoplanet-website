@@ -61,7 +61,7 @@ export default function Hero() {
                 <span className="text-sm font-bold text-navy">4.9/5 Rating</span>
               </div>
               <p className="text-sm font-semibold text-navy/80">
-                Trusted by 10,000+ Happy Patients
+                Trusted by 250+ Happy Patients
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Hero() {
           />
           <div className="animate-floaty absolute bottom-5 left-5 rounded-2xl bg-white/90 px-5 py-3 shadow-soft backdrop-blur">
             <p className="text-xs font-medium text-navy/60">Trusted by</p>
-            <p className="text-lg font-extrabold text-brand-600">10,000+ Patients</p>
+            <p className="text-lg font-extrabold text-brand-600">250+ Patients</p>
           </div>
         </div>
       </div>

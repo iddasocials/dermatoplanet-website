@@ -396,7 +396,7 @@ export default function TreatmentsPage() {
               </a>
             </div>
             <p className="mt-6 text-sm text-white/50">
-              Trusted by 10,000+ patients · Doctor-led consultations · Korean
+              Trusted by 250+ patients · Doctor-led consultations · Korean
               technology
             </p>
           </div>

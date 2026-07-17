@@ -54,7 +54,7 @@ export default function Reviews() {
               ))}
             </div>
             <span className="text-sm font-bold text-navy">
-              4.9/5 <span className="font-normal text-navy/60">from 300+ reviews</span>
+              4.9/5 <span className="font-normal text-navy/60">from 200+ reviews</span>
             </span>
           </div>
         </div>
